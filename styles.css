@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  /* font-size: 62.5%; */
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 1.5;
+  -webkit-text-size-adjust: none; /* for iOS Safari */
+  text-size-adjust: none; /* for other mobile browsers */
+}
+
+:root {
+  --def-transition-duration: 0.2s;
+  --accent-color: #7e8dc3;
+  --bg-color: #1c1f2b;
+}
+
+body {
+  position: relative;
+  max-width: 1680px;
+  margin: 0 auto;
+}
+
+section {
+  width: 95%;
+  background-color: var(--bg-color);
+  border-radius: 0.5rem;
+  margin: 0 auto 1rem auto;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #3c435d;
+  /* font-size: clamp(1.5rem, 2vw + 1rem, 2.25rem); */
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 1rem;
+  background-color: var(--accent-color);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+p {
+  padding: 1rem;
+  text-indent: 2rem;
+}
+
+a {
+  text-underline-position: under;
+  text-decoration-thickness: 8;
+}
+
+ul {
+  padding: 1.2rem;
+}
+
+li {
+  list-style: none;
+}
+
+table {
+  width: 30%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+td {
+  text-align: center;
+}
+
+th,
+td {
+  padding: 2px;
+  border: 1px solid white;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (min-width: 768px) {
+  h2 {
+    text-align: start;
+  }
+}
