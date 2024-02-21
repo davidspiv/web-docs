@@ -1,20 +1,22 @@
 const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+const mainNav = document.querySelector(".main-nav");
+const main = document.querySelector("main");
 
 hamburger.addEventListener("click", mobileMenu);
-navMenu.addEventListener("click", animate);
+mainNav.addEventListener("click", animate);
 
 function mobileMenu() {
-  navMenu.classList.toggle("active");
   hamburger.classList.toggle("active");
+  mainNav.classList.toggle("active");
+  main.classList.toggle("active");
   animate();
 }
 
 function animate() {
-  debounce(navMenu.classList.add("nav-animate"));
+  debounce(mainNav.classList.add("nav-animate"));
   debounce(
     setTimeout(() => {
-      navMenu.classList.remove("nav-animate");
+      mainNav.classList.remove("nav-animate");
     }, 200),
     200
   );
@@ -25,6 +27,6 @@ const navLink = document.querySelectorAll(".nav-item");
 navLink.forEach((n) => n.addEventListener("click", closeMenu));
 
 function closeMenu() {
-  navMenu.classList.remove("active");
+  mainNav.classList.remove("active");
   hamburger.classList.remove("active");
 }

@@ -5,33 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="header.css" />
   </head>
   <body>
     <header>
-      <nav class="navbar">
-        <button class="hamburger">
-          <img src="\assets\svg-icons\hamburger.svg" alt="expanding menu" />
-        </button>
-        <a href="#Introduction" id="nav-logo"><h1>Web Dev Notes</h1></a>
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="#HTML" class="nav-link">HTML</a>
-          </li>
-          <li class="nav-item">
-            <a href="#CSS" class="nav-link">CSS</a>
-          </li>
-          <li class="nav-item">
-            <a href="#Javascript" class="nav-link">Javascript</a>
-          </li>
-        </ul>
-        <!-- <img
+      <button class="hamburger">
+        <img src="\assets\svg-icons\hamburger.svg" alt="expanding menu" />
+      </button>
+      <a href="#Introduction" id="nav-logo"><h1>Web Dev Notes</h1></a>
+    </header>
+
+    <nav class="main-nav">
+      <ul>
+        <li class="nav-item">
+          <a href="#HTML" class="nav-link">HTML</a>
+        </li>
+        <li class="nav-item">
+          <a href="#CSS" class="nav-link">CSS</a>
+        </li>
+        <li class="nav-item">
+          <a href="#Javascript" class="nav-link">Javascript</a>
+        </li>
+      </ul>
+      <!-- <img
           class="hamburger"
           src="\assets\svg-icons\hamburger.svg"
           alt="Hamburger"
         /> -->
-      </nav>
-    </header>
+    </nav>
 
     <main>
       <div id="hero-img"></div>
@@ -171,6 +171,7 @@
       <section class="main-section" id="CSS"></section>
       <section class="main-section" id="Javascript"></section>
     </main>
+
     <script src="utils.js"></script>
     <script src="script.js"></script>
   </body>
