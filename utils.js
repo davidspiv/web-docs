@@ -9,3 +9,5 @@ const debounce = (func, delay = 500) => {
     }, delay);
   };
 };
+
+// console.log(test)
