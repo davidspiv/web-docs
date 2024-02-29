@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="bplate.css" />
+    <link rel="stylesheet" href="sitewide.css" />
+    <link rel="stylesheet" href="interior.css" />
+    <link rel="stylesheet" href="nav.css" />
+  </head>
+  <body>
+    <header>
+      <button class="hamburger">
+        <img src="\assets\svg-icons\hamburger.svg" alt="expanding menu" />
+      </button>
+      <a href="#Introduction" id="nav-logo"><h1>Web Dev Notes</h1></a>
+    </header>
+
+    <nav class="main-nav">
+      <ul>
+        <li class="nav-item">
+          <a href="#html" class="nav-link">HTML</a>
+        </li>
+        <li class="nav-item">
+          <a href="#css" class="nav-link">CSS</a>
+        </li>
+        <li class="nav-item">
+          <a href="#javascript" class="nav-link">Javascript</a>
+        </li>
+        <li class="nav-item">
+          <a href="#git" class="nav-link">HTML</a>
+        </li>
+      </ul>
+      <!-- <img
+          class="hamburger"
+          src="\assets\svg-icons\hamburger.svg"
+          alt="Hamburger"
+        /> -->
+    </nav>
+
+    <main>
+      <div id="hero-img"></div>
+      <!-- <picture>
+        <source
+          media="(min-width: 1500px)"
+          srcset="
+            \assets\Homepage_XLarge_3840x1546_fullsize2x_1920x770_crop_center.webp
+          "
+        />
+        <source
+          media="(min-width: 600px)"
+          srcset="
+            \assets\Homepage_XLarge_3840x1546_fullsize2x_1200x580_crop_center.webp
+          "
+        />
+        <img
+          src="\assets\Homepage_Small_750x750_2x_278fa11d-6fd7-4396-aa6f-49485e9153aa_500x500_crop_center.webp"
+          alt="hero-img"
+        />
+      </picture> -->
+
+      <section class="main-section" id="introduction">
+        <h2>Introduction</h2>
+        <p>Organized into languages</p>
+      </section>
+      <section class="main-section" id="HTML">
+        <h2>HTML</h2>
+        <p>
+          HTML (HyperText Markup Language) is the code that is used to structure
+          a web page and its content. It consists of a series of elements, which
+          you use to enclose, or wrap, sections of content to make it appear or
+          act a certain way.
+        </p>
+        <h3>Elements</h3>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
+          target="_blank"
+          >Element reference</a
+        >
+        <figure>
+          <code>&lt;element-type&gt;content&lt;/element-type&gt;</code>
+          <figcaption>
+            <strong>Element</strong>: defined by opening tag, content, and a
+            closing tag
+          </figcaption>
+        </figure>
+        <figure>
+          <code>&lt;element-type attribute-property:“value”&gt</code>
+          <figcaption>
+            <strong>Void Element</strong>: defined by single tag which is
+            typically used to insert/embed data in document
+          </figcaption>
+        </figure>
+        <h3>Attributes</h3>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes#attribute_list"
+          target="_blank"
+          >Attribute reference</a
+        >
+        <figure>
+          <code>attribute-property:“value”</code>
+          <figcaption>
+            <strong>Attribute</strong>: additional information in the opening
+            tag about the element that won't appear in the content
+          </figcaption>
+        </figure>
+        <h3>Boilerplate HTML</h3>
+        <ul>
+          <li>
+            <code>&lt;!DOCTYPE html&gt;</code>: Doctype is a historical artifact
+            that needs to be included for everything else to work right. It is
+            the shortest string of characters that counts as a valid doctype.
+          </li>
+          <li>
+            <code>&lt;html lang=“en”&gt;&lt;/html&gt;</code>: All the content on
+            the page. It is sometimes known as the root element. Include the
+            “lang” attribute to be indexed more effectively by search engines
+            and useful to people with visual impairments.
+          </li>
+          <li>
+            <code>&lt;head&gt;&lt;/head&gt;</code>: Metadata about the document.
+          </li>
+          <li>
+            <code>&lt;meta charset="utf-8"&gt;</code>: This element represents
+            metadata that cannot be represented by other HTML meta-related
+            elements, like &ltbase&gt, &ltlink&gt, &ltscript&gt, &ltstyle&gt or
+            &lttitle&gt. The “charset” attribute specifies the character
+            encoding of the document as UTF-8, which includes most characters
+            from the vast majority of human written languages. With this
+            setting, the page can now handle any textual content it might
+            contain.
+          </li>
+          <li>
+            <code>&lt;title&gt;&lt;/title&gt;</code>: Title of the page, which
+            is the title that appears in the browser tab the page is loaded in.
+            The page title is also used to describe the page when it is
+            bookmarked.
+          </li>
+          <li>
+            <code>&lt;body&gt;&lt;/body&gt;</code>: All the content for the
+            document
+          </li>
+        </ul>
+        <h3>Character Escapes</h3>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Literal</th>
+              <th scope="col">Ref</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">&lt;</th>
+              <td>&lt;</td>
+            </tr>
+            <tr>
+              <th scope="row">&gt;</th>
+              <td>&gt;</td>
+            </tr>
+            <tr>
+              <th scope="row">&quot;</th>
+              <td>&quot;</td>
+            </tr>
+            <tr>
+              <th scope="row">&#146;</th>
+              <td>&#146;</td>
+            </tr>
+            <tr>
+              <th scope="row">&amp;</th>
+              <td>&amp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="main-section" id="CSS"></section>
+      <section class="main-section" id="Javascript"></section>
+    </main>
+
+    <script src="utils.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
