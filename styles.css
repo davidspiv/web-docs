@@ -7,7 +7,7 @@
 html {
   font-size: 16px;
   /* font-size: 62.5%; */
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   line-height: 1.5;
   -webkit-text-size-adjust: none; /* for iOS Safari */
   text-size-adjust: none; /* for other mobile browsers */
@@ -17,8 +17,9 @@ html {
   --accent-color: #7e8dc3;
   --bg-color: #c6d3ff;
 
-  --header-height: 4rem;
+  --header-height: 5.5rem;
   --nav-width: 10rem;
+  --cgap: clamp(1.5rem, 3vw, 4rem);
 
   --def-transition-duration: 0.2s;
 }
@@ -32,6 +33,8 @@ header {
   top: 0;
   width: 100%;
   position: fixed;
+  display: grid;
+  grid-template-columns: auto 75vw auto;
   height: var(--header-height);
   text-align: center;
   background-color: var(--accent-color);
@@ -61,20 +64,19 @@ header {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--cgap);
   margin-left: 0;
   margin-top: var(--header-height);
-  padding: 1rem;
   transition-property: margin-left;
 }
 
 section {
   background-color: var(--bg-color);
   border-radius: 0.5rem;
-  margin-bottom: 1rem;
-  /* margin: 1rem; */
 }
 
-p,
 h1,
 h2,
 h3,
@@ -148,11 +150,9 @@ header a {
 }
 
 .hamburger {
-  position: absolute;
-  left: 1.5rem;
-  top: 1.5rem;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin: 0 auto;
 }
 
 .hamburger,
