@@ -12,7 +12,7 @@ html {
   --bg-color: #c6d3ff;
 
   --header-height: 5rem;
-  --ygap: 1.7vw;
+  --ygap: clamp(0.7rem, 1.7vw, 1.3rem);
   --xgap: clamp(1rem, 1.9vw, 2rem);
 
   --def-transition-duration: 0.2s;
