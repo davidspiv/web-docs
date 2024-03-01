@@ -12,7 +12,7 @@ html {
   --bg-color: #c6d3ff;
 
   --header-height: 5rem;
-  --ygap: clamp(0.7rem, 1.7vw, 1.3rem);
+  --ygap: clamp(0.6rem, 1.7vw, 1.3rem);
   --xgap: clamp(1rem, 1.9vw, 2rem);
 
   --def-transition-duration: 0.2s;
@@ -25,7 +25,7 @@ body {
 
 header {
   top: 0;
-  width: 98%;
+  width: 97.7%;
   margin: 0 auto;
   position: sticky;
   display: grid;
@@ -34,7 +34,7 @@ header {
   height: var(--header-height);
   background-color: white;
   border-bottom: 1.2px solid white;
-  border-image: linear-gradient(90deg, #ffff 5%, #292d3e 50%, #ffff 95%) 40;
+  border-image: linear-gradient(90deg, #ffff 8%, #292d3e 50%, #ffff 92%) 40;
 }
 
 .hamburger {
