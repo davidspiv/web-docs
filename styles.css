@@ -11,7 +11,7 @@ html {
   --accent-color: #7e8dc3;
   --bg-color: #c6d3ff;
 
-  --header-height: 4.4rem;
+  --header-height: 5rem;
   --ygap: 1.7vw;
   --xgap: clamp(1rem, 1.9vw, 2rem);
 
@@ -29,7 +29,7 @@ header {
   margin: 0 auto;
   position: sticky;
   display: grid;
-  grid-template-columns: 4.5rem auto 4.5rem;
+  grid-template-columns: 3.7rem auto 3.7rem;
   align-items: center;
   height: var(--header-height);
   background-color: white;
@@ -60,7 +60,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: var(--xgap);
-  margin-top: var(--header-height);
   padding: 0 var(--ygap);
 }
 
@@ -71,8 +70,9 @@ section {
 }
 
 h1 {
-  margin: 0;
   text-align: center;
+  text-wrap: nowrap;
+  margin: 0;
 }
 
 h2 {
@@ -82,6 +82,10 @@ h2 {
   background-color: var(--accent-color);
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
+}
+
+h3 {
+  text-align: center;
 }
 
 ul {
@@ -108,6 +112,43 @@ td {
   border: 1px solid white;
 }
 
+* {
+  /* Holy Albatross technique */
+  --breakpoint: var(--break-at, 30rem);
+  --min: min((var(--breakpoint) - 100%) * 999, 100%);
+
+  --clamp: clamp(
+    100% / var(--cols, 1) - 15px,
+    (var(--breakpoint) - 100%) * 999,
+    100%
+  );
+}
+
+.grid-container {
+  --cols: 2;
+  --break-at: 43.2rem;
+  display: grid;
+  grid:
+    dense auto-flow auto /
+    repeat(auto-fit, minmax(var(--clamp), 1fr));
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.8rem;
+  padding: 0.8rem 0.1rem;
+}
+
+.grid-element {
+  border: 1px solid var(--accent-color);
+  border-radius: 1rem;
+  background-color: #bbc7f2;
+}
+
+.has-children {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
@@ -115,7 +156,24 @@ td {
 }
 
 @media (min-width: 768px) {
+  h1 {
+    text-align: left;
+  }
+
   nav h2 {
     text-align: start;
+  }
+
+  .grid-element {
+    min-height: 20rem;
+  }
+
+  .has-children {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .x2 {
+    grid-column: 1/3;
   }
 }
