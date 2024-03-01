@@ -14,15 +14,17 @@
   align-items: center;
   background-color: var(--bg-color);
   transform: translate(-100%, 0);
+  opacity: 0;
   transition-property: none;
 }
 
 #main-nav.nav-animate {
-  transition-property: transform;
+  transition-property: transform, opacity;
 }
 
 #main-nav.active {
   transform: translate(0, 0);
+  opacity: 1;
 }
 
 .hamburger {

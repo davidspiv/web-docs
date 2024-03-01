@@ -11,7 +11,7 @@ html {
   --accent-color: #7e8dc3;
   --bg-color: #c6d3ff;
 
-  --header-height: 4rem;
+  --header-height: 4.4rem;
   --cgap: clamp(1.5rem, 3vw, 4rem);
 
   --def-transition-duration: 0.2s;
@@ -20,12 +20,16 @@ html {
 header {
   top: 0;
   width: 100%;
+  max-width: 1680px;
+  margin: 0 auto;
   position: fixed;
   display: grid;
-  grid-template-columns: auto 75vw auto;
+  grid-template-columns: 4.5rem auto 4.5rem;
   align-items: center;
   height: var(--header-height);
-  background-color: #292d3e;
+  background-color: #ffff;
+  border: 2px solid white;
+  border-image: linear-gradient(90deg, #ffff, #292d3e 50%, #ffff) 90;
 }
 
 header a {
@@ -55,23 +59,24 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  gap: var(--cgap);
+  gap: 2rem;
   margin-top: var(--header-height);
+  padding: 0 1rem;
 }
 
 section {
   background-color: var(--bg-color);
   border-radius: 0.5rem;
+  padding: 0 1rem;
 }
 
 h1 {
   margin: 0;
   text-align: center;
-  color: white;
 }
 
 h2 {
-  margin: 0;
+  margin: 0 -1rem;
   text-align: center;
   padding: 0.5rem;
   background-color: var(--accent-color);
