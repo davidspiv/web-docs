@@ -118,6 +118,10 @@ td {
   border: 1px solid white;
 }
 
+section p {
+  padding: var(--small-gap);
+}
+
 * {
   /* Holy Albatross technique */
   --breakpoint: var(--break-at, 30rem);
@@ -132,7 +136,7 @@ td {
 
 .grid-container {
   --cols: 2;
-  --break-at: 43.2rem;
+  --break-at: 10rem;
   display: grid;
   grid:
     dense auto-flow auto /
@@ -147,6 +151,7 @@ td {
   border: 1px solid #b7c3ee;
   border-radius: 0.5rem;
   background-color: #bbc7f2;
+  padding: var(--small-gap);
 }
 
 .has-children {

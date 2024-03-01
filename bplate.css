@@ -9,13 +9,11 @@
 }
 
 html {
-  font-size: 62.5%;
   -webkit-text-size-adjust: none; /* for iOS Safari */
   text-size-adjust: none; /* for other mobile browsers */
 }
 
 body {
-  font-size: 1.2rem;
   max-width: 1280px;
   margin: 0 auto;
 }
