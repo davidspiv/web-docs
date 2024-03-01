@@ -1,5 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="#1c1f2b" viewBox="0 0 8.8 7.88">
-    <rect y="6.64" width="8.8" height="1.24" rx="0.62" />
-    <rect y="3.32" width="8.8" height="1.24" rx="0.62" />
-    <rect width="8.8" height="1.24" rx="0.62" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99 90">
+    <rect
+    x="0.5"
+    y="72.5"
+    width="98"
+    height="17"
+    rx="4"
+    fill="#ffff"
+    stroke="#7e8dc3"
+    />
+    <rect
+    x="0.5"
+    y="36.5"
+    width="98"
+    height="17"
+    rx="4"
+    fill="#ffff"
+    stroke="#7e8dc3"
+    />
+    <rect
+    x="0.5"
+    y="0.5"
+    width="98"
+    height="17"
+    rx="4"
+    fill="#ffff"
+    stroke="#7e8dc3"
+    />
 </svg>

@@ -19,7 +19,8 @@ html {
 }
 
 body {
-  max-width: 1680px;
+  position: relative;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -35,6 +36,15 @@ header {
   background-color: white;
   border-bottom: 1.2px solid;
   border-image: linear-gradient(90deg, #ffff 12%, #2b3043 50%, #ffff 88%) 40;
+}
+
+button {
+  background: none;
+  background-color: var(--bg-color);
+  border-radius: 0.2rem;
+  padding: 0.2rem;
+  box-shadow: inset 0 0 0.2rem var(--accent-color);
+  opacity: 0.8;
 }
 
 .hamburger {
@@ -56,6 +66,10 @@ header a {
 .nav-link {
   transition-duration: var(--def-transition-duration);
   transition-timing-function: ease-in-out;
+}
+
+button:hover {
+  opacity: 1;
 }
 
 .nav-link:hover {
@@ -88,10 +102,6 @@ h2 {
   background-color: var(--accent-color);
   border-top-left-radius: 0.8rem;
   border-top-right-radius: 0.8rem;
-}
-
-h3 {
-  text-align: center;
 }
 
 ul {
@@ -148,9 +158,7 @@ section p {
 }
 
 .grid-element {
-  border: 1px solid #b7c3ee;
   border-radius: 0.5rem;
-  background-color: #bbc7f2;
   padding: var(--small-gap);
 }
 
@@ -171,8 +179,8 @@ section p {
     text-align: left;
   }
 
-  nav h2 {
-    text-align: start;
+  h3 {
+    text-align: center;
   }
 
   .grid-element {

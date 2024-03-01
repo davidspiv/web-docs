@@ -13,11 +13,6 @@ html {
   text-size-adjust: none; /* for other mobile browsers */
 }
 
-body {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
 h1,
 h2,
 h3,
@@ -36,11 +31,6 @@ a {
 img {
   display: block;
   max-width: 100%;
-}
-
-button {
-  background: none;
-  padding: 0;
 }
 
 ol,
