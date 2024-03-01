@@ -136,7 +136,7 @@ section p {
 
 .grid-container {
   --cols: 2;
-  --break-at: 10rem;
+  --break-at: 43.2rem;
   display: grid;
   grid:
     dense auto-flow auto /
