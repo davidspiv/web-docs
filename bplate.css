@@ -25,12 +25,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-size:clamp(1.6rem, 1vw + 1rem, 2.2rem);
+  font-size: clamp(1.6rem, 1vw + 1rem, 2.2rem);
 }
 
 a {
   text-underline-position: under;
   text-decoration-thickness: 8;
+  color: black;
 }
 
 img {

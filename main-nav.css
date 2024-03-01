@@ -1,20 +1,8 @@
 :root {
-  --header-height: 10rem;
   --nav-width: 10rem;
 }
 
-header {
-  top: 0;
-  width: 100%;
-  position: fixed;
-  display: grid;
-  grid-template-columns: auto 75vw auto;
-  align-items: center;
-  height: var(--header-height);
-  background-color: var(--accent-color);
-}
-
-.main-nav {
+#main-nav {
   position: fixed;
   margin-top: var(--header-height);
   top: 0;
@@ -29,23 +17,22 @@ header {
   transition-property: none;
 }
 
-.nav-animate {
+#main-nav.nav-animate {
   transition-property: transform;
 }
 
-.main-nav.active {
+#main-nav.active {
   transform: translate(0, 0);
 }
 
-nav a,
-header a {
-  text-decoration: none;
-  color: black;
+#main-nav.h1 {
+  color: #ffff;
 }
 
 .nav-link {
   text-decoration: none;
   transition-property: color;
+  color: black;
 }
 
 .hamburger {
@@ -54,20 +41,13 @@ header a {
   margin: 0 auto;
 }
 
-.hamburger,
-.main-nav,
-.nav-link,
-main {
+#main-nav {
   transition-duration: var(--def-transition-duration);
   transition-timing-function: ease-in-out;
 }
 
-.nav-link:hover {
-  color: #e8e8e8;
-}
-
 @media (min-width: 768px) {
-  .main-nav {
+  #main-nav {
     width: var(--nav-width);
   }
 

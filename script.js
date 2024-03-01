@@ -1,5 +1,5 @@
 const hamburger = document.querySelector(".hamburger");
-const mainNav = document.querySelector(".main-nav");
+const mainNav = document.querySelector("#main-nav");
 const main = document.querySelector("main");
 
 hamburger.addEventListener("click", mobileMenu);
@@ -29,4 +29,5 @@ navLink.forEach((n) => n.addEventListener("click", closeMenu));
 function closeMenu() {
   mainNav.classList.remove("active");
   hamburger.classList.remove("active");
+  main.classList.remove("active");
 }
