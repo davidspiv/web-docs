@@ -16,6 +16,7 @@
   transform: translate(-100%, 0);
   opacity: 0;
   transition-property: none;
+  border-right: 1px solid var(--accent-color);
 }
 
 #main-nav.nav-animate {
@@ -25,11 +26,6 @@
 #main-nav.active {
   transform: translate(0, 0);
   opacity: 1;
-}
-
-.hamburger {
-  width: 2rem;
-  height: 2rem;
 }
 
 #main-nav {

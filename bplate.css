@@ -40,6 +40,11 @@ img {
   max-width: 100%;
 }
 
+button {
+  background: none;
+  padding: 0;
+}
+
 ol,
 ul {
   padding-left: 0;

@@ -25,16 +25,22 @@ body {
 
 header {
   top: 0;
-  width: 96.5%;
+  width: 97%;
   margin: 0 auto;
   position: sticky;
   display: grid;
-  grid-template-columns: 3.7rem auto 3.7rem;
+  grid-template-columns: 4.7rem auto 4.7rem;
   align-items: center;
   height: var(--header-height);
   background-color: white;
   border-bottom: 1.2px solid white;
   border-image: linear-gradient(90deg, #ffff 5%, #292d3e 50%, #ffff 95%) 40;
+}
+
+.hamburger {
+  width: 1.4rem;
+  height: 1.4rem;
+  margin: 0 auto;
 }
 
 header a {
@@ -64,7 +70,7 @@ main {
 }
 
 section {
-  background-color: var(--bg-color);
+  background: var(--bg-color);
   border-radius: 0.5rem;
   padding: 0 0.8rem;
 }
