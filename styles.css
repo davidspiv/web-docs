@@ -12,8 +12,8 @@ html {
   --bg-color: #c6d3ff;
 
   --header-height: 5rem;
-  --ygap: clamp(0.6rem, 1.7vw, 1.3rem);
-  --xgap: clamp(1rem, 1.9vw, 2rem);
+  --small-gap: clamp(0.6rem, 1.7vw, 1.3rem);
+  --big-gap: clamp(1rem, 1.9vw, 2rem);
 
   --def-transition-duration: 0.2s;
 }
@@ -33,8 +33,8 @@ header {
   align-items: center;
   height: var(--header-height);
   background-color: white;
-  border-bottom: 1.2px solid white;
-  border-image: linear-gradient(90deg, #ffff 8%, #292d3e 50%, #ffff 92%) 40;
+  border-bottom: 2px solid white;
+  border-image: linear-gradient(90deg, #ffff 15%, #292d3e 50%, #ffff 85%) 40;
 }
 
 .hamburger {
@@ -65,14 +65,14 @@ header a {
 main {
   display: flex;
   flex-direction: column;
-  gap: var(--xgap);
-  padding: 0 var(--ygap);
+  gap: var(--big-gap);
+  padding: 0 var(--small-gap);
 }
 
 section {
   background: var(--bg-color);
   border-radius: 0.5rem;
-  padding: 0 0.8rem;
+  padding: 0 var(--small-gap);
 }
 
 h1 {
@@ -82,7 +82,7 @@ h1 {
 }
 
 h2 {
-  margin: 0 -0.8rem;
+  margin: 0 calc(-1 * var(--small-gap));
   text-align: center;
   padding: 0.5rem;
   background-color: var(--accent-color);
