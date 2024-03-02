@@ -1,79 +1,35 @@
 html {
-  font-size: 16px;
-  /* font-size: 62.5%; */
   font-family: Georgia, "Times New Roman", Times, serif;
-  line-height: 1.5;
-  -webkit-text-size-adjust: none; /* for iOS Safari */
-  text-size-adjust: none; /* for other mobile browsers */
 }
 
-:root {
+* {
+  /* COLOR */
   --accent-color: #7e8dc3;
   --bg-color: #c6d3ff;
 
+  /* TIME */
+  --def-transition-duration: 0.2s;
+
+  /* LENGTH */
   --header-height: 5rem;
   --small-gap: clamp(0.6rem, 1.7vw, 1.3rem);
   --big-gap: clamp(1rem, 1.9vw, 2rem);
 
-  --def-transition-duration: 0.2s;
+  /* HOLY ALBATROSS */
+  --breakpoint: var(--break-at, 30rem);
+  --min: min((var(--breakpoint) - 100%) * 999, 100%);
+
+  --clamp: clamp(
+    100% / var(--cols, 1) - 15px,
+    (var(--breakpoint) - 100%) * 999,
+    100%
+  );
 }
 
 body {
-  position: relative;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
-}
-
-header {
-  top: 0;
-  width: 97.7%;
-  margin: 0 auto;
-  position: sticky;
-  display: grid;
-  grid-template-columns: 4.7rem auto 4.7rem;
-  align-items: center;
-  height: var(--header-height);
-  background-color: white;
-  border-bottom: 1.2px solid;
-  border-image: linear-gradient(90deg, #ffff 12%, #2b3043 50%, #ffff 88%) 40;
-}
-
-button {
-  background: none;
-  background-color: var(--bg-color);
-  border-radius: 0.2rem;
-  padding: 0.2rem;
-  box-shadow: inset 0 0 0.2rem var(--accent-color);
-  opacity: 0.8;
-}
-
-.hamburger {
-  width: 1.4rem;
-  height: 1.4rem;
-  margin: 0 auto;
-}
-
-header a {
-  text-decoration: none;
-}
-
-.nav-link {
-  text-decoration: none;
-  transition-property: color;
-  color: black;
-}
-
-.nav-link {
-  transition-duration: var(--def-transition-duration);
-  transition-timing-function: ease-in-out;
-}
-
-button:hover {
-  opacity: 1;
-}
-
-.nav-link:hover {
-  color: #e8e8e8;
+  line-height: 1.4;
 }
 
 main {
@@ -89,10 +45,20 @@ section {
   padding: 0 var(--small-gap);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: clamp(2.2rem, 2vw + 1.25rem, 2.7rem);
+}
+
 h1 {
   text-align: center;
   text-wrap: nowrap;
   margin: 0;
+  color: #000000;
 }
 
 h2 {
@@ -104,18 +70,13 @@ h2 {
   border-top-right-radius: 0.8rem;
 }
 
-ul {
-  padding: 1.2rem;
-}
-
-li {
-  list-style: none;
+a {
+  text-decoration: none;
 }
 
 table {
   width: 30%;
   table-layout: fixed;
-  border-collapse: collapse;
 }
 
 td {
@@ -130,18 +91,6 @@ td {
 
 section p {
   padding: var(--small-gap);
-}
-
-* {
-  /* Holy Albatross technique */
-  --breakpoint: var(--break-at, 30rem);
-  --min: min((var(--breakpoint) - 100%) * 999, 100%);
-
-  --clamp: clamp(
-    100% / var(--cols, 1) - 15px,
-    (var(--breakpoint) - 100%) * 999,
-    100%
-  );
 }
 
 .grid-container {
