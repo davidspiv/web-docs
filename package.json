@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "marked": "marked -i readme.md -o dist/readme.html"
+    "mark": "marked -i html.md -o dist/html1.html && node append.js"
   },
   "keywords": [],
   "author": "",
