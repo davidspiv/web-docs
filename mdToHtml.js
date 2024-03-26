@@ -1,4 +1,4 @@
-// Gets data from all markdown files (except readme) in /root
+// Gets data from all markdown files (except readme) in /src
 // Uses data to create html files in /dist
 
 import fs from "fs";
@@ -12,7 +12,7 @@ const header = `
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="output.css" />
   </head>
 
   <body>
@@ -78,23 +78,24 @@ const header = `
         </ul>
       </nav>
     </header>
-
+    <div class="content-wrapper">
     <main>
 `;
 
 const footer = `
 </main>
-<script src="/src/utils.js"></script>
-<script src="/src/script.js"></script>
+</div>
+<script src="utils.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
 `;
 
-getMarkdownFromRoot("./", /\.md$/, function (fileName) {
+getMarkdownFromSrc("src/", /\.md$/, function (fileName) {
   parse(fileName);
 });
 
-function getMarkdownFromRoot(startPath, filter, callback) {
+function getMarkdownFromSrc(startPath, filter, callback) {
   if (!fs.existsSync(startPath)) {
     console.log("Mo markdown files in ", startPath);
     return;
@@ -104,7 +105,7 @@ function getMarkdownFromRoot(startPath, filter, callback) {
 
   for (let i = 0; i < files.length; i++) {
     const fileName = path.join(startPath, files[i]);
-    if (filter.test(fileName) && fileName !== "readme.md") callback(fileName);
+    if (filter.test(fileName)) callback(fileName);
   }
 }
 
@@ -121,7 +122,10 @@ function parse(fileName) {
 
 function writeHtml(data, fileName) {
   data = `${header}${data}${footer}`;
+
   fileName = fileName.replace("md", "html");
+  fileName = fileName.replace("src\\", "");
+
   fs.writeFile(`dist/${fileName}`, data, (err) => {
     if (err) {
       console.error(err);
