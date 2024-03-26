@@ -19,4 +19,25 @@ closing tag.
 
 ## Escapes
 
+| Literal | Ref    |
+| ------- | ------ |
+| &lt;    | &lt;   |
+| &gt;    | &gt;   |
+| "       | &quot; |
+| '       | &apos; |
+| &       | &amp;  |
 
+## Boilerplate
+
+`&lt;!DOCTYPE html&gt;` : Doctype is a historical artifact that needs to be included for everything else to work right. &lt;!DOCTYPE html&gt; is the shortest string of characters that counts as a valid doctype.
+
+`&lt;html lang=“en”&gt;&lt;/html&gt;` : All the content on the page. It is sometimes known as the root element. Include the “lang” attribute to be indexed more effectively by search engines and useful to people with visual impairments.
+
+`&lt;head&gt;&lt;/head&gt;` : Metadata about the document.
+
+`&lt;meta charset="utf-8"&gt;` : This element represents metadata that cannot be represented by other HTML meta-related elements, like &lt;base&gt;, &lt;link&gt;, &lt;script&gt;, &lt;style&gt; or &lt;title&gt;. The “charset” attribute specifies the character encoding of the document as UTF-8, which includes most characters from the vast majority of human written languages. With this setting, the page can now handle any textual content it might contain.
+
+`&lt;title&gt;&lt;/title&gt;`
+: Title of the page, which is the title that appears in the browser tab the page is loaded in. The page title is also used to describe the page when it is bookmarked.
+
+`&lt;body&gt;&lt;/body&gt;` : All the content for the document.

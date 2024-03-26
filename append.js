@@ -88,18 +88,26 @@ const footer = `
 </html>
 `;
 
-fs.readFile("dist/html1.html", "utf8", (err, data) => {
-  if (err) {
-    console.error(err);
-    return;
-  }
+function parse(fileName) {
+  fs.readFile(`dist/${fileName}.html`, "utf8", (err, data) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    writeHtml(data, fileName);
+  });
+}
+
+function writeHtml(data, fileName) {
   data = `${header}${data}${footer}`;
 
-  fs.writeFile("dist/html1.html", data, (err) => {
+  fs.writeFile(`dist/${fileName}.html`, data, (err) => {
     if (err) {
       console.error(err);
     } else {
       console.error("yay!");
     }
   });
-});
+}
+
+parse("html");
