@@ -1,4 +1,10 @@
+// Gets data from all markdown files (except readme) in /root
+// Uses data to create html files in /dist
+
 import fs from "fs";
+import path from "path";
+import { marked } from "marked";
+
 const header = `
 <!DOCTYPE html>
 <html lang="en">
@@ -6,9 +12,7 @@ const header = `
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="header.css" />
   </head>
 
   <body>
@@ -76,11 +80,9 @@ const header = `
     </header>
 
     <main>
-
 `;
 
 const footer = `
-
 </main>
 <script src="/src/utils.js"></script>
 <script src="/src/script.js"></script>
@@ -88,26 +90,43 @@ const footer = `
 </html>
 `;
 
+getMarkdownFromRoot("./", /\.md$/, function (fileName) {
+  parse(fileName);
+});
+
+function getMarkdownFromRoot(startPath, filter, callback) {
+  if (!fs.existsSync(startPath)) {
+    console.log("Mo markdown files in ", startPath);
+    return;
+  }
+
+  const files = fs.readdirSync(startPath);
+
+  for (let i = 0; i < files.length; i++) {
+    const fileName = path.join(startPath, files[i]);
+    if (filter.test(fileName) && fileName !== "readme.md") callback(fileName);
+  }
+}
+
 function parse(fileName) {
-  fs.readFile(`dist/${fileName}.html`, "utf8", (err, data) => {
+  fs.readFile(fileName, "utf8", (err, data) => {
     if (err) {
       console.error(err);
       return;
     }
+    data = marked.parse(data);
     writeHtml(data, fileName);
   });
 }
 
 function writeHtml(data, fileName) {
   data = `${header}${data}${footer}`;
-
-  fs.writeFile(`dist/${fileName}.html`, data, (err) => {
+  fileName = fileName.replace("md", "html");
+  fs.writeFile(`dist/${fileName}`, data, (err) => {
     if (err) {
       console.error(err);
     } else {
-      console.error("yay!");
+      console.log(`Edited - ${fileName}`);
     }
   });
 }
-
-parse("html");

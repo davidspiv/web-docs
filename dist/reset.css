@@ -1,8 +1,12 @@
 /*
-https://meyerweb.com/eric/tools/css/reset/
-https://blog.logrocket.com/what-should-modern-css-boilerplate-look-like/
+1) http://meyerweb.com/eric/tools/css/reset/
+2) https://www.joshwcomeau.com/css/custom-css-reset/
 */
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 html,
 body,
 div,
@@ -91,7 +95,22 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -106,62 +125,37 @@ nav,
 section {
   display: block;
 }
-
-* {
-  border: none;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-  -webkit-text-size-adjust: none; /* for iOS Safari */
-  text-size-adjust: none; /* for other mobile browsers */
-}
-
-body {
-  font-size: 1.6rem;
-}
-
-a {
-  text-underline-position: under;
-  text-decoration-thickness: 8;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-img {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
-
+:root {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+button {
+  background: inherit;
+}
 ol,
 ul {
-  padding-left: 0;
-}
-
-ol:not(article ol),
-ul:not(article ul) {
   list-style: none;
 }
-
-article ol,
-article ul {
-  list-style-position: inside;
-}
-
 blockquote,
 q {
   quotes: none;
 }
-
 blockquote:before,
 blockquote:after,
 q:before,
@@ -169,7 +163,7 @@ q:after {
   content: "";
   content: none;
 }
-
-:focus:not(:focus-visible) {
-  outline: none;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
