@@ -135,7 +135,7 @@ const footer = `
 </html>
 `;
 
-getMarkdownFromSrc("src/", /\.md$/, function (fileName) {
+getMarkdownFromSrc("src/md/", /\.md$/, function (fileName) {
   parse(fileName);
 });
 
@@ -174,8 +174,9 @@ function parse(fileName) {
 function writeHtml(data, fileName) {
   data = `${header}${data}${footer}`;
 
+  console.log(fileName);
+  fileName = fileName.replace("src\\md", "");
   fileName = fileName.replace("md", "html");
-  fileName = fileName.replace("src\\", "");
 
   fs.writeFile(`dist/${fileName}`, data, (err) => {
     if (err) {

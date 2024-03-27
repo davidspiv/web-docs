@@ -5,8 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node mdToHtml.js & lightningcss --bundle -m src/styles.css -o dist/output.css"
+    "build": "node buildFromMarkdown.js & lightningcss --bundle -m src/styles.css -o dist/output.css"
   },
   "keywords": [],
   "author": "",
