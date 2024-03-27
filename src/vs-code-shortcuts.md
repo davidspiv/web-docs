@@ -1,8 +1,8 @@
-# Basic Tools
+# VS Code Shortcuts
 
 ## Appearance
 
-### Show hidden characters
+**Show hidden characters**
 
 ```
 "[markdown]": {
@@ -15,7 +15,7 @@
 
 Make hidden characters easily visible in the editor. This is on by default for all languages, except for Plain Text and Markdown, so we have to turn it on there explicitly.
 
-### Render whitespace
+**Render whitespace**
 
 ```
 "editor.renderWhitespace": "boundary",
@@ -41,7 +41,7 @@ By default the file navigation tree will collapse folders that only contain a si
 
 ## Feel
 
-### Cursor blinking
+**Cursor blinking**
 
 ```
 "editor.cursorBlinking": "phase",
@@ -49,7 +49,7 @@ By default the file navigation tree will collapse folders that only contain a si
 
 Control if the caret (typing cursor) blinks or not, as well as the animation it uses for the blink.
 
-### Smooth scrolling
+**Smooth scrolling**
 
 ```
 "editor.smoothScrolling": true,
@@ -57,7 +57,7 @@ Control if the caret (typing cursor) blinks or not, as well as the animation it 
 
 Adds a slight animation to vertically scrolling, rather than the page just jumping to the new location.
 
-### Smooth caret animations
+**Smooth caret animations**
 
 ```
 "editor.cursorSmoothCaretAnimation": "on",
@@ -67,7 +67,7 @@ Adds a slight animation of the caret moving to the new location, making it easie
 
 ## Utility
 
-### Stickyscroll
+**Stickyscroll**
 
 ```
 "editor.stickyScroll.enabled": false,
@@ -75,43 +75,93 @@ Adds a slight animation of the caret moving to the new location, making it easie
 
 As you scroll down through nested classes/functions/structures, the names stick to the top of the editor making it hard to see things.
 
-### File tree sticky scroll
+**File tree sticky scroll**
 
 "workbench.tree.enableStickyScroll": true,
 
 Keeps the directory hierarchy visible as you scroll through the file tree.
 
-### Debug toolbar location
+**Debug toolbar location**
 
+```
 "debug.toolBarLocation": "commandCenter",
+```
+
 By default the debug toolbar floats so that it is always visible and can be repositioned. The problem is it often floats over other controls or tabs, making them hard to access. Modify to show the debug toolbar in the Command Center.
-FORMAT
-Format on paste
+
+## Format
+
+**Format on paste**
+
+```
 "editor.formatOnPaste": true,
+```
+
 When you paste text into the editor, VS Code can automatically format the text for you according to any linters or formatting rules you have configured.
-Format on save
+
+**Format on save**
+
+```
 "editor.formatOnSave": true,
+```
+
 Automatically format a file when you save it
 Format on save mode
+
+```
 "editor.formatOnSaveMode": "modifications",
+```
+
 Formats only the lines that have been changed.
-SAVE
-Save Files automatically
+
+## Save
+
+**Save Files automatically**
+
+```
 "files.autoSave": "onFocusChange",
+```
+
 Autosaves when the editor loses focus
-Trim trailing white space
+
+**Trim trailing white space**
+
+```
 "files.trimTrailingWhitespace": true,
+```
+
 Automatically remove trailing whitespace at the end of any lines when the file is saved.
-Trim final newline
+
+**Trim final newline**
+
+```
 "files.trimFinalNewlines": true,
+```
+
 This setting will automatically trim any additional final newlines from the end of the file when you save it.
-Insert final newline
+
+**Insert final newline**
+
+```
 "files.insertFinalNewline": true,
+```
+
 Automatically add a final newline to the end of the file when you save it. Unix requires a final newline to be present on text files.
-GIT
-Git autofetch
+
+## Git
+
+**Git autofetch**
+
+```
 "git.autofetch": true,
+```
+
 Automatically fetch from the remote repository periodically.
-Merge Editor
+
+**Merge Editor**
+
+```
 "git.mergeEditor": true,
+```
+
 When resolving merge conflicts, VS Code will open the visual merge editor to help you resolve the conflicting lines.

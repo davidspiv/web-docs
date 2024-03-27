@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="output.css" />
+    <!-- <link rel="stylesheet" href="../src/styles.css" /> -->
+  </head>
+
+  <body>
+  <header>
+  <div class="content-wrapper">
+    <button class="hamburger">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99 90">
+        <rect
+          x="0.5"
+          y="72.5"
+          width="98"
+          height="17"
+          rx="4"
+          fill="#ffff"
+          stroke="#7e8dc3"
+        />
+        <rect
+          x="0.5"
+          y="36.5"
+          width="98"
+          height="17"
+          rx="4"
+          fill="#ffff"
+          stroke="#7e8dc3"
+        />
+        <rect
+          x="0.5"
+          y="0.5"
+          width="98"
+          height="17"
+          rx="4"
+          fill="#ffff"
+          stroke="#7e8dc3"
+        />
+      </svg>
+    </button>
+    <a href="#Introduction"><p id="header-logo">Web Dev Notes</p></a>
+  </div>
+  <nav id="main-nav">
+    <ul>
+      <li class="nav-item">
+        <a href="index.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="vs-code-shortcuts.html" class="nav-link"
+          >VS Code Shortcuts</a
+        >
+      </li>
+      <li class="nav-item">
+        <a href="html.html" class="nav-link">HTML</a>
+      </li>
+      <li class="nav-item">
+        <a href="css.html" class="nav-link">CSS</a>
+      </li>
+      <li class="nav-item">
+        <a href="javascript.html" class="nav-link">Javascript</a>
+      </li>
+      <li class="nav-item">
+        <a href="responsive-design.html" class="nav-link"
+          >Responsive Design</a
+        >
+      </li>
+      <li class="nav-item">
+        <a href="accessibility.html" class="nav-link">Accessibility</a>
+      </li>
+      <li class="nav-item">
+        <a href="algorithms.html" class="nav-link">Algorithms</a>
+      </li>
+      <li class="nav-item">
+        <a href="datastructures.html" class="nav-link">Data Structures</a>
+      </li>
+      <li class="nav-item">
+        <a href="dynamic-programing.html" class="nav-link"
+          >Dynamic Programing</a
+        >
+      </li>
+      <li class="nav-item">
+        <a href="networking.html" class="nav-link">Networking</a>
+      </li>
+      <li class="nav-item">
+        <a href="command-line.html" class="nav-link">Command Line</a>
+      </li>
+      <li class="nav-item">
+        <a href="node.html" class="nav-link">Node.js</a>
+      </li>
+      <li class="nav-item">
+        <a href="npm.html" class="nav-link">npm</a>
+      </li>
+      <li class="nav-item">
+        <a href="linting.html" class="nav-link">Linting</a>
+      </li>
+      <li class="nav-item">
+        <a href="git.html" class="nav-link">Git</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+    <div class="content-wrapper">
+      <main>
+
+<h1>VS Code Shortcuts</h1>
+<h2>Appearance</h2>
+<p><strong>Show hidden characters</strong></p>
+<pre><code>&quot;[markdown]&quot;: {
+&quot;editor.unicodeHighlight.invisibleCharacters&quot;: true
+},
+&quot;[plaintext]&quot;: {
+&quot;editor.unicodeHighlight.invisibleCharacters&quot;: true
+},
+</code></pre>
+<p>Make hidden characters easily visible in the editor. This is on by default for all languages, except for Plain Text and Markdown, so we have to turn it on there explicitly.</p>
+<p><strong>Render whitespace</strong></p>
+<pre><code>&quot;editor.renderWhitespace&quot;: &quot;boundary&quot;,
+</code></pre>
+<p>By default VS Code only shows a glyph for space and tab characters when you highlight them. The boundary setting toggles glyphs any time there is potentially unexpected whitespace, which is typically when there is more than one whitespace character including indentation
+Minimap</p>
+<pre><code>&quot;editor.minimap.autohide&quot;: true,
+&quot;editor.minimap.renderCharacters&quot;: false,
+&quot;editor.minimap.showSlider&quot;: &quot;always&quot;,
+</code></pre>
+<p>The minimap is a small preview of the entire file that is displayed on the right side of the editor, replacing the traditional vertical scrollbar.
+File tree compact folders</p>
+<pre><code>&quot;explorer.compactFolders&quot;: false,
+</code></pre>
+<p>By default the file navigation tree will collapse folders that only contain a single folder. This saves a bit of vertical space, but can also make it harder to drag and drop files or folders into the collapsed folder.</p>
+<h2>Feel</h2>
+<p><strong>Cursor blinking</strong></p>
+<pre><code>&quot;editor.cursorBlinking&quot;: &quot;phase&quot;,
+</code></pre>
+<p>Control if the caret (typing cursor) blinks or not, as well as the animation it uses for the blink.</p>
+<p><strong>Smooth scrolling</strong></p>
+<pre><code>&quot;editor.smoothScrolling&quot;: true,
+</code></pre>
+<p>Adds a slight animation to vertically scrolling, rather than the page just jumping to the new location.</p>
+<p><strong>Smooth caret animations</strong></p>
+<pre><code>&quot;editor.cursorSmoothCaretAnimation&quot;: &quot;on&quot;,
+</code></pre>
+<p>Adds a slight animation of the caret moving to the new location, making it easier to follow.</p>
+<h2>Utility</h2>
+<p><strong>Stickyscroll</strong></p>
+<pre><code>&quot;editor.stickyScroll.enabled&quot;: false,
+</code></pre>
+<p>As you scroll down through nested classes/functions/structures, the names stick to the top of the editor making it hard to see things.</p>
+<p><strong>File tree sticky scroll</strong></p>
+<p>&quot;workbench.tree.enableStickyScroll&quot;: true,</p>
+<p>Keeps the directory hierarchy visible as you scroll through the file tree.</p>
+<p><strong>Debug toolbar location</strong></p>
+<pre><code>&quot;debug.toolBarLocation&quot;: &quot;commandCenter&quot;,
+</code></pre>
+<p>By default the debug toolbar floats so that it is always visible and can be repositioned. The problem is it often floats over other controls or tabs, making them hard to access. Modify to show the debug toolbar in the Command Center.</p>
+<h2>Format</h2>
+<p><strong>Format on paste</strong></p>
+<pre><code>&quot;editor.formatOnPaste&quot;: true,
+</code></pre>
+<p>When you paste text into the editor, VS Code can automatically format the text for you according to any linters or formatting rules you have configured.</p>
+<p><strong>Format on save</strong></p>
+<pre><code>&quot;editor.formatOnSave&quot;: true,
+</code></pre>
+<p>Automatically format a file when you save it
+Format on save mode</p>
+<pre><code>&quot;editor.formatOnSaveMode&quot;: &quot;modifications&quot;,
+</code></pre>
+<p>Formats only the lines that have been changed.</p>
+<h2>Save</h2>
+<p><strong>Save Files automatically</strong></p>
+<pre><code>&quot;files.autoSave&quot;: &quot;onFocusChange&quot;,
+</code></pre>
+<p>Autosaves when the editor loses focus</p>
+<p><strong>Trim trailing white space</strong></p>
+<pre><code>&quot;files.trimTrailingWhitespace&quot;: true,
+</code></pre>
+<p>Automatically remove trailing whitespace at the end of any lines when the file is saved.</p>
+<p><strong>Trim final newline</strong></p>
+<pre><code>&quot;files.trimFinalNewlines&quot;: true,
+</code></pre>
+<p>This setting will automatically trim any additional final newlines from the end of the file when you save it.</p>
+<p><strong>Insert final newline</strong></p>
+<pre><code>&quot;files.insertFinalNewline&quot;: true,
+</code></pre>
+<p>Automatically add a final newline to the end of the file when you save it. Unix requires a final newline to be present on text files.</p>
+<h2>Git</h2>
+<p><strong>Git autofetch</strong></p>
+<pre><code>&quot;git.autofetch&quot;: true,
+</code></pre>
+<p>Automatically fetch from the remote repository periodically.</p>
+<p><strong>Merge Editor</strong></p>
+<pre><code>&quot;git.mergeEditor&quot;: true,
+</code></pre>
+<p>When resolving merge conflicts, VS Code will open the visual merge editor to help you resolve the conflicting lines.</p>
+
+</main>
+</div>
+<footer></footer>
+<script src="utils.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
