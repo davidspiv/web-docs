@@ -91,10 +91,10 @@ const header = `
         <a href="algorithms.html" class="nav-link">Algorithms</a>
       </li>
       <li class="nav-item">
-        <a href="datastructures.html" class="nav-link">Data Structures</a>
+        <a href="data-structures.html" class="nav-link">Data Structures</a>
       </li>
       <li class="nav-item">
-        <a href="dynamic-programing.html" class="nav-link"
+        <a href="dynamic-programming.html" class="nav-link"
           >Dynamic Programing</a
         >
       </li>
