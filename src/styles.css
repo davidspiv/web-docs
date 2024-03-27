@@ -1,8 +1,8 @@
-@layer reset, layout, components, theme;
+@layer reset, base, components, theme;
 
 @import "reset.css" layer(reset);
 
-@layer layout {
+@layer base {
   * {
     /* TIME */
     --def-transition-duration: 0.2s;
@@ -25,17 +25,51 @@
     margin: var(--gap) 0;
   }
 
-  h2,
-  h3,
-  #nav-logo p:first-child {
+  table {
+    width: 30%;
+    min-width: 20rem;
+    margin: 0 auto;
+    table-layout: fixed;
+  }
+
+  td {
     text-align: center;
   }
 
-  #nav-logo p:first-child {
-    overflow: visible;
-    text-wrap: nowrap;
+  th,
+  td {
+    padding: 2px;
+    border: 1px solid black;
   }
 
+  button {
+    opacity: 0.8;
+  }
+
+  button:hover {
+    opacity: 1;
+  }
+
+  .content-wrapper {
+    padding: 0 var(--gap);
+    max-width: 1200px;
+    margin: 0 auto;
+    height: inherit;
+  }
+
+  main {
+    margin: var(--big-gap) 0;
+    min-height: 80vh;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+}
+
+@layer components {
   header,
   footer {
     height: var(--header-height);
@@ -48,13 +82,6 @@
     position: sticky;
     /* border-bottom: 1.2px solid;
     border-image: linear-gradient(90deg, #ffff 12%, #2b3043 50%, #ffff 88%) 40; */
-  }
-
-  .content-wrapper {
-    padding: 0 var(--gap);
-    max-width: 1200px;
-    margin: 0 auto;
-    height: inherit;
   }
 
   header .content-wrapper {
@@ -89,62 +116,16 @@
     gap: var(--gap);
   }
 
-  #nav-logo {
-    width: 100%;
-  }
-
-  main {
-    margin: var(--big-gap) 0;
-    min-height: 80vh;
-  }
-
-  @media (min-width: 768px) {
-    h2,
-    h3,
-    #nav-logo p:first-child {
-      text-align: left;
-    }
-
-    #nav-logo p:first-child {
-      margin-left: 3.5rem;
-    }
-
-    #main-nav {
-      width: var(--nav-width);
-    }
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    html {
-      scroll-behavior: smooth;
-    }
-  }
-}
-
-@layer components {
-  table {
-    width: 30%;
-    min-width: 20rem;
-    margin: 0 auto;
-    table-layout: fixed;
-  }
-
-  td {
+  h2,
+  h3,
+  #header-logo {
     text-align: center;
   }
 
-  th,
-  td {
-    padding: 2px;
-    border: 1px solid black;
-  }
-
-  button {
-    opacity: 0.8;
-  }
-
-  button:hover {
-    opacity: 1;
+  #header-logo {
+    width: 100%;
+    overflow: visible;
+    text-wrap: nowrap;
   }
 
   button,
@@ -162,18 +143,34 @@
     transform: translate(0, 0);
     opacity: 1;
   }
+
+  @media (min-width: 768px) {
+    h2,
+    h3,
+    #header-logo p:first-child {
+      text-align: left;
+    }
+
+    #header-logo p:first-child {
+      margin-left: 3.5rem;
+    }
+
+    #main-nav {
+      width: var(--nav-width);
+    }
+  }
 }
 
 @layer theme {
   * {
     /* COLOR */
     --text-color: #181a1b;
-    color: var(--text-color);
   }
 
   :root {
     font-family: Montserrat, Georgia, "Times New Roman", Times, serif;
     scroll-behavior: smooth;
+    color: var(--text-color);
   }
 
   h1,
@@ -182,7 +179,7 @@
   h4,
   h5,
   h6,
-  #nav-logo p:first-child {
+  #header-logo {
     font-size: clamp(2.2rem, 2vw + 1.25rem, 2.7rem);
   }
 

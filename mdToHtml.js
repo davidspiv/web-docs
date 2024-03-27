@@ -28,7 +28,7 @@ const header = `
             alt="expanding menu"
           />
         </button>
-        <a href="#Introduction" id="nav-logo"><p>Web Dev Notes</p></a>
+        <a href="#Introduction" id="header-logo"><p>Web Dev Notes</p></a>
       </div>
       <nav id="main-nav">
         <ul>
