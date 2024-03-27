@@ -1,6 +1,6 @@
-## CSS
+# CSS
 
-### Overview
+## Overview
 
 The appearance / presentation of a web page. Stylesheet language used to selectively style HTML elements.
 

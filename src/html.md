@@ -1,10 +1,10 @@
-## HTML
+# HTML
 
-### Overview
+## Overview
 
 HTML (HyperText Markup Language) is the code that is used to structure a web page and its content. It consists of a series of elements, which you use to enclose sections of content to make it appear or act a certain way.
 
-### Elements
+## Elements
 
 **Element**: defined by opening tag, content, and a
 closing tag.
@@ -17,7 +17,7 @@ closing tag.
 
 [Element Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes#attribute_list)
 
-### Escapes
+## Escapes
 
 | Literal | Ref    |
 | ------- | ------ |
@@ -27,7 +27,7 @@ closing tag.
 | '       | &apos; |
 | &       | &amp;  |
 
-### Boilerplate
+## Boilerplate
 
 `&lt;!DOCTYPE html&gt;` : Doctype is a historical artifact that needs to be included for everything else to work right. &lt;!DOCTYPE html&gt; is the shortest string of characters that counts as a valid doctype.
 

@@ -66,8 +66,8 @@ const header = `
         <a href="index.html" class="nav-link">Home</a>
       </li>
       <li class="nav-item">
-        <a href="vs-code-shortcuts.html" class="nav-link"
-          >VS Code Shortcuts</a
+        <a href="vs-code-settings.html" class="nav-link"
+          >VS Code Settings</a
         >
       </li>
       <li class="nav-item">

@@ -1,4 +1,4 @@
-# VS Code Shortcuts
+# VS Code Settings
 
 ## Appearance
 

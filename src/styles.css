@@ -77,6 +77,7 @@
     width: 30%;
     min-width: 20rem;
     margin: 0 auto;
+    margin-top: var(--big-gap);
     table-layout: fixed;
     border-collapse: collapse;
     border-spacing: 0;
