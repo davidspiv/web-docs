@@ -1,5 +1,7 @@
-// Gets data from all markdown files (except readme) in /src
-// Uses data to create html files in /dist
+// Get data from markdown files in /src
+// Parse markdown and create HTML snippets with the marked dependency
+// Wrap HTML snippets with boilerplate
+// Write HTML to files in /dist
 
 import fs from "fs";
 import path from "path";

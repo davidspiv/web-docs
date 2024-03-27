@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="../src/styles.css" />
+    <!-- <link rel="stylesheet" href="../src/styles.css" /> -->
+  </head>
+
+  <body>
+    <header>
+      <div class="content-wrapper">
+        <button class="hamburger">
+          <img
+            id="purple"
+            src="/assets/svg-icons/hamburger.svg"
+            alt="expanding menu"
+          />
+        </button>
+        <a href="#Introduction" id="nav-logo"><p>Web Dev Notes</p></a>
+      </div>
+      <nav id="main-nav">
+        <ul>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="basic-tools.html" class="nav-link">Basic Tools</a>
+          </li>
+          <li class="nav-item">
+            <a href="html.html" class="nav-link">HTML</a>
+          </li>
+          <li class="nav-item">
+            <a href="css.html" class="nav-link">CSS</a>
+          </li>
+          <li class="nav-item">
+            <a href="javascript.html" class="nav-link">Javascript</a>
+          </li>
+          <li class="nav-item">
+            <a href="responsive-design.html" class="nav-link"
+              >Responsive Design</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="accessibility.html" class="nav-link">Accessibility</a>
+          </li>
+          <li class="nav-item">
+            <a href="algorithms.html" class="nav-link">Algorithms</a>
+          </li>
+          <li class="nav-item">
+            <a href="datastructures.html" class="nav-link">Data Structures</a>
+          </li>
+          <li class="nav-item">
+            <a href="dynamic-programing.html" class="nav-link"
+              >Dynamic Programing</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="networking.html" class="nav-link">Networking</a>
+          </li>
+          <li class="nav-item">
+            <a href="command-line.html" class="nav-link">Command Line</a>
+          </li>
+          <li class="nav-item">
+            <a href="node.html" class="nav-link">Node.js</a>
+          </li>
+          <li class="nav-item">
+            <a href="npm.html" class="nav-link">npm</a>
+          </li>
+          <li class="nav-item">
+            <a href="linting.html" class="nav-link">Linting</a>
+          </li>
+          <li class="nav-item">
+            <a href="git.html" class="nav-link">Git</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="content-wrapper">
+      <main>
+
+<pre><code>{
+  &quot;debug.toolBarLocation&quot;: &quot;commandCenter&quot;,
+
+  &quot;editor.defaultFormatter&quot;: &quot;esbenp.prettier-vscode&quot;,
+  &quot;editor.formatOnSave&quot;: true,
+  &quot;editor.fontSize&quot;: 20,
+  &quot;editor.mouseWheelScrollSensitivity&quot;: 2,
+  // &quot;editor.minimap.autohide&quot;: true,
+  // &quot;editor.minimap.renderCharacters&quot;: false,
+  // &quot;editor.minimap.showSlider&quot;: &quot;always&quot;,
+  &quot;editor.renderWhitespace&quot;: &quot;boundary&quot;,
+  &quot;editor.cursorBlinking&quot;: &quot;phase&quot;,
+  &quot;editor.stickyScroll.enabled&quot;: false,
+  &quot;editor.smoothScrolling&quot;: true,
+  &quot;editor.cursorSmoothCaretAnimation&quot;: &quot;on&quot;,
+  &quot;editor.linkedEditing&quot;: true,
+  &quot;explorer.compactFolders&quot;: false,
+  &quot;explorer.confirmDragAndDrop&quot;: false,
+  &quot;files.trimTrailingWhitespace&quot;: true,
+  &quot;files.insertFinalNewline&quot;: true,
+  &quot;files.trimFinalNewlines&quot;: true,
+
+  &quot;git.confirmSync&quot;: false,
+  &quot;git.autofetch&quot;: true,
+  &quot;git.mergeEditor&quot;: true,
+  &quot;git.openRepositoryInParentFolders&quot;: &quot;always&quot;,
+
+  &quot;liveServer.settings.donotShowInfoMsg&quot;: true,
+  &quot;liveServer.settings.showOnStatusbar&quot;: false,
+
+  &quot;terminal.integrated.profiles.windows&quot;: {
+    &quot;Git Bash&quot;: { &quot;path&quot;: &quot;C:\\Program Files\\Git\\bin\\bash.exe&quot; }
+  },
+  &quot;terminal.integrated.defaultProfile.windows&quot;: &quot;Git Bash&quot;,
+  &quot;terminal.integrated.defaultProfile.osx&quot;: &quot;bash&quot;,
+  &quot;terminal.integrated.fontSize&quot;: 18,
+  &quot;workbench.tree.enableStickyScroll&quot;: true,
+  &quot;workbench.statusBar.visible&quot;: true,
+
+  &quot;[jsonc]&quot;: {
+    &quot;editor.defaultFormatter&quot;: &quot;esbenp.prettier-vscode&quot;
+  },
+  &quot;[markdown]&quot;: {
+    &quot;editor.unicodeHighlight.invisibleCharacters&quot;: true
+  },
+  &quot;[plaintext]&quot;: {
+    &quot;editor.unicodeHighlight.invisibleCharacters&quot;: true
+  },
+  &quot;vim.leader&quot;: &quot; &quot;,
+  &quot;vim.hlsearch&quot;: true,
+  &quot;vim.useSystemClipboard&quot;: true,
+  &quot;vim.smartRelativeLine&quot;: true,
+  &quot;vim.useCtrlKeys&quot;: false,
+
+  &quot;vim.insertModeKeyBindings&quot;: [
+    {
+      &quot;before&quot;: [&quot;q&quot;, &quot;q&quot;],
+      &quot;after&quot;: [&quot;&lt;Right&gt;&quot;]
+    }
+  ],
+  &quot;editor.minimap.enabled&quot;: false,
+  &quot;editor.suggest.snippetsPreventQuickSuggestions&quot;: true,
+  &quot;editor.snippetSuggestions&quot;: &quot;top&quot;,
+  &quot;files.autoSave&quot;: &quot;afterDelay&quot;,
+  &quot;explorer.sortOrder&quot;: &quot;type&quot;,
+
+  &quot;stylelint.packageManager&quot;: &quot;pnpm&quot;,
+  &quot;diffEditor.hideUnchangedRegions.enabled&quot;: true,
+  &quot;workbench.colorTheme&quot;: &quot;Material Theme Palenight&quot;
+
+  // &quot;emmet.includeLanguages&quot;: {
+  //   &quot;postcss&quot;: &quot;css&quot;
+  // }
+}
+</code></pre>
+<h2>Basic Tools</h2>
+<h3>Appearance</h3>
+<h4>Show hidden characters</h4>
+<pre><code>&quot;[markdown]&quot;: {
+&quot;editor.unicodeHighlight.invisibleCharacters&quot;: true
+},
+&quot;[plaintext]&quot;: {
+&quot;editor.unicodeHighlight.invisibleCharacters&quot;: true
+},
+</code></pre>
+<ul>
+<li>Make hidden characters easily visible in the editor. This is on by default for all languages, except for Plain Text and Markdown, so we have to turn it on there explicitly.</li>
+</ul>
+<h4>Render whitespace</h4>
+<pre><code>&quot;editor.renderWhitespace&quot;: &quot;boundary&quot;,
+</code></pre>
+<ul>
+<li>By default VS Code only shows a glyph for space and tab characters when you highlight them. The boundary setting toggles glyphs any time there is potentially unexpected whitespace, which is typically when there is more than one whitespace character including indentation
+Minimap</li>
+</ul>
+<pre><code>&quot;editor.minimap.autohide&quot;: true,
+&quot;editor.minimap.renderCharacters&quot;: false,
+&quot;editor.minimap.showSlider&quot;: &quot;always&quot;,
+</code></pre>
+<ul>
+<li>The minimap is a small preview of the entire file that is displayed on the right side of the editor, replacing the traditional vertical scrollbar.
+File tree compact folders</li>
+</ul>
+<pre><code>&quot;explorer.compactFolders&quot;: false,
+</code></pre>
+<ul>
+<li>By default the file navigation tree will collapse folders that only contain a single folder. This saves a bit of vertical space, but can also make it harder to drag and drop files or folders into the collapsed folder.</li>
+</ul>
+<h3>Feel</h3>
+<h4>Cursor blinking</h4>
+<pre><code>&quot;editor.cursorBlinking&quot;: &quot;phase&quot;,
+</code></pre>
+<ul>
+<li>Control if the caret (typing cursor) blinks or not, as well as the animation it uses for the blink.</li>
+</ul>
+<h4>Smooth scrolling</h4>
+<pre><code>&quot;editor.smoothScrolling&quot;: true,
+</code></pre>
+<ul>
+<li>Adds a slight animation to vertically scrolling, rather than the page just jumping to the new location.</li>
+</ul>
+<h4>Smooth caret animations</h4>
+<pre><code>&quot;editor.cursorSmoothCaretAnimation&quot;: &quot;on&quot;,
+</code></pre>
+<ul>
+<li>Adds a slight animation of the caret moving to the new location, making it easier to follow.</li>
+</ul>
+<h3>Utility</h3>
+<h4>Stickyscroll</h4>
+<pre><code>&quot;editor.stickyScroll.enabled&quot;: false,
+</code></pre>
+<p>As you scroll down through nested classes/functions/structures, the names stick to the top of the editor making it hard to see things.
+File tree sticky scroll
+&quot;workbench.tree.enableStickyScroll&quot;: true,
+Keeps the directory hierarchy visible as you scroll through the file tree.
+Debug toolbar location
+&quot;debug.toolBarLocation&quot;: &quot;commandCenter&quot;,
+By default the debug toolbar floats so that it is always visible and can be repositioned. The problem is it often floats over other controls or tabs, making them hard to access. Modify to show the debug toolbar in the Command Center.
+FORMAT
+Format on paste
+&quot;editor.formatOnPaste&quot;: true,
+When you paste text into the editor, VS Code can automatically format the text for you according to any linters or formatting rules you have configured.
+Format on save
+&quot;editor.formatOnSave&quot;: true,
+Automatically format a file when you save it
+Format on save mode
+&quot;editor.formatOnSaveMode&quot;: &quot;modifications&quot;,
+Formats only the lines that have been changed.
+SAVE
+Save Files automatically
+&quot;files.autoSave&quot;: &quot;onFocusChange&quot;,
+Autosaves when the editor loses focus
+Trim trailing white space
+&quot;files.trimTrailingWhitespace&quot;: true,
+Automatically remove trailing whitespace at the end of any lines when the file is saved.
+Trim final newline
+&quot;files.trimFinalNewlines&quot;: true,
+This setting will automatically trim any additional final newlines from the end of the file when you save it.
+Insert final newline
+&quot;files.insertFinalNewline&quot;: true,
+Automatically add a final newline to the end of the file when you save it. Unix requires a final newline to be present on text files.
+GIT
+Git autofetch
+&quot;git.autofetch&quot;: true,
+Automatically fetch from the remote repository periodically.
+Merge Editor
+&quot;git.mergeEditor&quot;: true,
+When resolving merge conflicts, VS Code will open the visual merge editor to help you resolve the conflicting lines.</p>
+
+</main>
+</div>
+<footer></footer>
+<script src="utils.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
