@@ -1,8 +1,8 @@
-## Basic Tools
+# Basic Tools
 
-### Appearance
+## Appearance
 
-#### Show hidden characters
+### Show hidden characters
 
 ```
 "[markdown]": {
@@ -13,16 +13,16 @@
 },
 ```
 
-- Make hidden characters easily visible in the editor. This is on by default for all languages, except for Plain Text and Markdown, so we have to turn it on there explicitly.
+Make hidden characters easily visible in the editor. This is on by default for all languages, except for Plain Text and Markdown, so we have to turn it on there explicitly.
 
-#### Render whitespace
+### Render whitespace
 
 ```
 "editor.renderWhitespace": "boundary",
 ```
 
-- By default VS Code only shows a glyph for space and tab characters when you highlight them. The boundary setting toggles glyphs any time there is potentially unexpected whitespace, which is typically when there is more than one whitespace character including indentation
-  Minimap
+By default VS Code only shows a glyph for space and tab characters when you highlight them. The boundary setting toggles glyphs any time there is potentially unexpected whitespace, which is typically when there is more than one whitespace character including indentation
+Minimap
 
 ```
 "editor.minimap.autohide": true,
@@ -30,54 +30,59 @@
 "editor.minimap.showSlider": "always",
 ```
 
-- The minimap is a small preview of the entire file that is displayed on the right side of the editor, replacing the traditional vertical scrollbar.
-  File tree compact folders
+The minimap is a small preview of the entire file that is displayed on the right side of the editor, replacing the traditional vertical scrollbar.
+File tree compact folders
 
 ```
 "explorer.compactFolders": false,
 ```
 
-- By default the file navigation tree will collapse folders that only contain a single folder. This saves a bit of vertical space, but can also make it harder to drag and drop files or folders into the collapsed folder.
+By default the file navigation tree will collapse folders that only contain a single folder. This saves a bit of vertical space, but can also make it harder to drag and drop files or folders into the collapsed folder.
 
-### Feel
+## Feel
 
-#### Cursor blinking
+### Cursor blinking
 
 ```
 "editor.cursorBlinking": "phase",
 ```
 
-- Control if the caret (typing cursor) blinks or not, as well as the animation it uses for the blink.
+Control if the caret (typing cursor) blinks or not, as well as the animation it uses for the blink.
 
-#### Smooth scrolling
+### Smooth scrolling
 
 ```
 "editor.smoothScrolling": true,
 ```
 
-- Adds a slight animation to vertically scrolling, rather than the page just jumping to the new location.
+Adds a slight animation to vertically scrolling, rather than the page just jumping to the new location.
 
-#### Smooth caret animations
+### Smooth caret animations
 
 ```
 "editor.cursorSmoothCaretAnimation": "on",
 ```
 
-- Adds a slight animation of the caret moving to the new location, making it easier to follow.
+Adds a slight animation of the caret moving to the new location, making it easier to follow.
 
-### Utility
+## Utility
 
-#### Stickyscroll
+### Stickyscroll
 
 ```
 "editor.stickyScroll.enabled": false,
 ```
 
 As you scroll down through nested classes/functions/structures, the names stick to the top of the editor making it hard to see things.
-File tree sticky scroll
+
+### File tree sticky scroll
+
 "workbench.tree.enableStickyScroll": true,
+
 Keeps the directory hierarchy visible as you scroll through the file tree.
-Debug toolbar location
+
+### Debug toolbar location
+
 "debug.toolBarLocation": "commandCenter",
 By default the debug toolbar floats so that it is always visible and can be repositioned. The problem is it often floats over other controls or tabs, making them hard to access. Modify to show the debug toolbar in the Command Center.
 FORMAT

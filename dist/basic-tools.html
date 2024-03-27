@@ -82,9 +82,9 @@
     <div class="content-wrapper">
       <main>
 
-<h2>Basic Tools</h2>
-<h3>Appearance</h3>
-<h4>Show hidden characters</h4>
+<h1>Basic Tools</h1>
+<h2>Appearance</h2>
+<h3>Show hidden characters</h3>
 <pre><code>&quot;[markdown]&quot;: {
 &quot;editor.unicodeHighlight.invisibleCharacters&quot;: true
 },
@@ -92,58 +92,44 @@
 &quot;editor.unicodeHighlight.invisibleCharacters&quot;: true
 },
 </code></pre>
-<ul>
-<li>Make hidden characters easily visible in the editor. This is on by default for all languages, except for Plain Text and Markdown, so we have to turn it on there explicitly.</li>
-</ul>
-<h4>Render whitespace</h4>
+<p>Make hidden characters easily visible in the editor. This is on by default for all languages, except for Plain Text and Markdown, so we have to turn it on there explicitly.</p>
+<h3>Render whitespace</h3>
 <pre><code>&quot;editor.renderWhitespace&quot;: &quot;boundary&quot;,
 </code></pre>
-<ul>
-<li>By default VS Code only shows a glyph for space and tab characters when you highlight them. The boundary setting toggles glyphs any time there is potentially unexpected whitespace, which is typically when there is more than one whitespace character including indentation
-Minimap</li>
-</ul>
+<p>By default VS Code only shows a glyph for space and tab characters when you highlight them. The boundary setting toggles glyphs any time there is potentially unexpected whitespace, which is typically when there is more than one whitespace character including indentation
+Minimap</p>
 <pre><code>&quot;editor.minimap.autohide&quot;: true,
 &quot;editor.minimap.renderCharacters&quot;: false,
 &quot;editor.minimap.showSlider&quot;: &quot;always&quot;,
 </code></pre>
-<ul>
-<li>The minimap is a small preview of the entire file that is displayed on the right side of the editor, replacing the traditional vertical scrollbar.
-File tree compact folders</li>
-</ul>
+<p>The minimap is a small preview of the entire file that is displayed on the right side of the editor, replacing the traditional vertical scrollbar.
+File tree compact folders</p>
 <pre><code>&quot;explorer.compactFolders&quot;: false,
 </code></pre>
-<ul>
-<li>By default the file navigation tree will collapse folders that only contain a single folder. This saves a bit of vertical space, but can also make it harder to drag and drop files or folders into the collapsed folder.</li>
-</ul>
-<h3>Feel</h3>
-<h4>Cursor blinking</h4>
+<p>By default the file navigation tree will collapse folders that only contain a single folder. This saves a bit of vertical space, but can also make it harder to drag and drop files or folders into the collapsed folder.</p>
+<h2>Feel</h2>
+<h3>Cursor blinking</h3>
 <pre><code>&quot;editor.cursorBlinking&quot;: &quot;phase&quot;,
 </code></pre>
-<ul>
-<li>Control if the caret (typing cursor) blinks or not, as well as the animation it uses for the blink.</li>
-</ul>
-<h4>Smooth scrolling</h4>
+<p>Control if the caret (typing cursor) blinks or not, as well as the animation it uses for the blink.</p>
+<h3>Smooth scrolling</h3>
 <pre><code>&quot;editor.smoothScrolling&quot;: true,
 </code></pre>
-<ul>
-<li>Adds a slight animation to vertically scrolling, rather than the page just jumping to the new location.</li>
-</ul>
-<h4>Smooth caret animations</h4>
+<p>Adds a slight animation to vertically scrolling, rather than the page just jumping to the new location.</p>
+<h3>Smooth caret animations</h3>
 <pre><code>&quot;editor.cursorSmoothCaretAnimation&quot;: &quot;on&quot;,
 </code></pre>
-<ul>
-<li>Adds a slight animation of the caret moving to the new location, making it easier to follow.</li>
-</ul>
-<h3>Utility</h3>
-<h4>Stickyscroll</h4>
+<p>Adds a slight animation of the caret moving to the new location, making it easier to follow.</p>
+<h2>Utility</h2>
+<h3>Stickyscroll</h3>
 <pre><code>&quot;editor.stickyScroll.enabled&quot;: false,
 </code></pre>
-<p>As you scroll down through nested classes/functions/structures, the names stick to the top of the editor making it hard to see things.
-File tree sticky scroll
-&quot;workbench.tree.enableStickyScroll&quot;: true,
-Keeps the directory hierarchy visible as you scroll through the file tree.
-Debug toolbar location
-&quot;debug.toolBarLocation&quot;: &quot;commandCenter&quot;,
+<p>As you scroll down through nested classes/functions/structures, the names stick to the top of the editor making it hard to see things.</p>
+<h3>File tree sticky scroll</h3>
+<p>&quot;workbench.tree.enableStickyScroll&quot;: true,</p>
+<p>Keeps the directory hierarchy visible as you scroll through the file tree.</p>
+<h3>Debug toolbar location</h3>
+<p>&quot;debug.toolBarLocation&quot;: &quot;commandCenter&quot;,
 By default the debug toolbar floats so that it is always visible and can be repositioned. The problem is it often floats over other controls or tabs, making them hard to access. Modify to show the debug toolbar in the Command Center.
 FORMAT
 Format on paste
