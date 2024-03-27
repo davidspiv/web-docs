@@ -95,6 +95,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 input,
 button,
 textarea,
@@ -102,15 +103,7 @@ select {
   font: inherit;
   border: none;
 }
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -125,6 +118,7 @@ nav,
 section {
   display: block;
 }
+
 img,
 picture,
 video,
@@ -133,37 +127,40 @@ svg {
   display: block;
   max-width: 100%;
 }
-:root {
-  font-size: 62.5%;
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
 }
-body {
-  font-size: 1.6rem;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
+
 a {
   color: inherit;
   text-decoration: inherit;
 }
+
 button {
   background: inherit;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
   content: "";
   content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
 }

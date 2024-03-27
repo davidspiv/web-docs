@@ -16,13 +16,53 @@
     --header-height: clamp(8rem, calc(5vw + 4rem), 11rem);
   }
 
+  html {
+    font-size: 62.5%;
+    font-family: Montserrat, Georgia, "Times New Roman", Times, serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  main {
+    margin: var(--big-gap) 0;
+  }
+
   h1,
   h2,
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  #header-logo {
     margin: var(--gap) 0;
+  }
+
+  h1,
+  #header-logo {
+    font-size: clamp(2.3rem, 1.7vw + 1.1rem, 3.2rem);
+  }
+
+  h2,
+  h3 {
+    font-size: clamp(2.3rem, 2vw + 1rem, 3rem);
+  }
+
+  h2,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+  }
+
+  code {
+    display: inline-block;
+    padding: 2px;
+    border-radius: 0.2rem;
   }
 
   table {
@@ -30,6 +70,8 @@
     min-width: 20rem;
     margin: 0 auto;
     table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
   }
 
   td {
@@ -42,12 +84,8 @@
     border: 1px solid black;
   }
 
-  button {
-    opacity: 0.8;
-  }
-
-  button:hover {
-    opacity: 1;
+  strong {
+    font-weight: 600;
   }
 
   .content-wrapper {
@@ -55,11 +93,6 @@
     max-width: 1200px;
     margin: 0 auto;
     height: inherit;
-  }
-
-  main {
-    margin: var(--big-gap) 0;
-    min-height: 80vh;
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -80,8 +113,6 @@
     width: 100%;
     margin: 0 auto;
     position: sticky;
-    /* border-bottom: 1.2px solid;
-    border-image: linear-gradient(90deg, #ffff 12%, #2b3043 50%, #ffff 88%) 40; */
   }
 
   header .content-wrapper {
@@ -94,7 +125,6 @@
     width: 3.5rem;
     height: 3.5rem;
     margin: 0 auto;
-    /* margin-right: calc(var(--header-height) / 2.5); */
   }
 
   #main-nav {
@@ -116,14 +146,13 @@
     gap: var(--gap);
   }
 
-  h2,
   h3,
   #header-logo {
     text-align: center;
   }
 
   #header-logo {
-    width: 100%;
+    display: block;
     overflow: visible;
     text-wrap: nowrap;
   }
@@ -145,7 +174,6 @@
   }
 
   @media (min-width: 768px) {
-    h2,
     h3,
     #header-logo p:first-child {
       text-align: left;
@@ -167,26 +195,22 @@
     --text-color: #181a1b;
   }
 
-  :root {
-    font-family: Montserrat, Georgia, "Times New Roman", Times, serif;
-    scroll-behavior: smooth;
+  html {
     color: var(--text-color);
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  #header-logo {
-    font-size: clamp(2.2rem, 2vw + 1.25rem, 2.7rem);
   }
 
   header,
   footer {
     /* background-image: linear-gradient(45deg, #849aba, #5f6f86); */
     background-color: #778eb3;
+  }
+
+  button {
+    opacity: 0.8;
+  }
+
+  button:hover {
+    opacity: 1;
   }
 
   #main-nav {
@@ -200,5 +224,9 @@
 
   .nav-link:hover {
     color: #e8e8e8;
+  }
+
+  code {
+    background-color: #e8e8e8;
   }
 }
