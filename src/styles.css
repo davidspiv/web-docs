@@ -1,7 +1,6 @@
 @layer reset, layout, components, theme;
 
 @import "reset.css" layer(reset);
-@import "header.css" layer(components);
 
 @layer reset {
 }
@@ -13,8 +12,6 @@
 
   * {
     /* COLOR */
-    --accent-color: #7e8dc3;
-    --bg-color: #c6d3ff;
 
     /* TIME */
     --def-transition-duration: 0.2s;
@@ -49,37 +46,39 @@
   header .content-wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 var(--big-gap);
+  }
+
+  #nav-logo {
+    width: 100%;
+  }
+
+  h2,
+  h3 {
+    text-align: center;
   }
 
   main {
     margin: var(--big-gap) 0;
+    min-height: 80vh;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: clamp(2.2rem, 2vw + 1.25rem, 2.7rem);
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
   }
 
-  h1 {
-    text-align: center;
-    text-wrap: nowrap;
-    margin: 0;
-    color: #000000;
+  @media (min-width: 768px) {
+    h2,
+    h3 {
+      text-align: left;
+    }
   }
+}
 
-  h2 {
-    background-color: var(--accent-color);
-    margin: 0 calc(-1 * var(--gap));
-    text-align: center;
-    padding: 0.5rem;
-    border-top-left-radius: 0.8rem;
-    border-top-right-radius: 0.8rem;
+@layer components {
+  :root {
+    --nav-width: 33%;
   }
 
   table {
@@ -97,59 +96,111 @@
     border: 1px solid black;
   }
 
-  .grid-container {
-    display: grid;
-    grid-auto-flow: dense row;
+  header {
+    top: 0;
+    width: 100%;
+    height: var(--header-height);
+    margin: 0 auto;
+    position: sticky;
+    /* border-bottom: 1.2px solid;
+    border-image: linear-gradient(90deg, #ffff 12%, #2b3043 50%, #ffff 88%) 40; */
+  }
+
+  button,
+  .nav-link,
+  #main-nav {
+    transition-duration: var(--def-transition-duration);
+    transition-timing-function: ease-in-out;
+  }
+
+  button {
+    background: none;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    opacity: 0.8;
+  }
+
+  button:hover {
+    opacity: 1;
+  }
+
+  .hamburger {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: var(--big-gap);
+  }
+
+  #main-nav {
+    position: fixed;
+    margin-top: var(--header-height);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    gap: 0.9rem;
-    padding: 0.5rem 0;
+    background-color: #778eb3;
+    transform: translate(-100%, 0);
+    opacity: 0;
+    transition-property: none;
   }
 
-  .grid-element {
-    padding: var(--bgap);
-    border: 1px solid white;
-    border-radius: 0.5rem;
+  #main-nav.nav-animate {
+    transition-property: transform, opacity;
   }
 
-  @media (prefers-reduced-motion: no-preference) {
-    html {
-      scroll-behavior: smooth;
-    }
+  #main-nav.active {
+    transform: translate(0, 0);
+    opacity: 1;
   }
 
   @media (min-width: 768px) {
-    h1 {
-      text-align: left;
-    }
-
-    h3 {
-      text-align: center;
-    }
-
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-auto-flow: dense row;
-      align-items: center;
-      justify-content: space-around;
-      gap: 0.9rem;
-      padding: 0.5rem 0;
-    }
-
-    .grid-element {
-      min-height: 20rem;
-    }
-
-    .x2 {
-      grid-column: 1/3;
-    }
-
-    .x2 > ul {
-      display: flex;
-      justify-content: space-between;
+    #main-nav {
+      width: var(--nav-width);
     }
   }
 }
 
 @layer theme {
+  * {
+    /* COLOR */
+    --text-color: #181a1b;
+    color: var(--text-color);
+  }
+
+  :root {
+    font-family: Montserrat, Georgia, "Times New Roman", Times, serif;
+    scroll-behavior: smooth;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  #nav-logo p:first-child {
+    font-size: clamp(2.2rem, 2vw + 1.25rem, 2.7rem);
+  }
+
+  header,
+  footer {
+    /* background-image: linear-gradient(45deg, #849aba, #5f6f86); */
+    background-color: #778eb3;
+  }
+
+  .nav-link {
+    transition-property: color;
+    color: black;
+  }
+
+  .nav-link:hover {
+    color: #e8e8e8;
+  }
+
+  header button:hover,
+  footer button:hover {
+    background-color: #849aba;
+  }
 }
