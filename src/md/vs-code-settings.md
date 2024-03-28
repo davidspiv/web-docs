@@ -1,5 +1,75 @@
 # VS Code Settings
 
+```
+"debug.toolBarLocation": "commandCenter",
+
+"editor.defaultFormatter": "esbenp.prettier-vscode",
+"editor.formatOnSave": true,
+"editor.fontSize": 20,
+"editor.mouseWheelScrollSensitivity": 2,
+"editor.renderWhitespace": "boundary",
+"editor.cursorBlinking": "phase",
+"editor.stickyScroll.enabled": false,
+"editor.smoothScrolling": true,
+"editor.cursorSmoothCaretAnimation": "on",
+"editor.linkedEditing": true,
+"editor.minimap.enabled": false,
+"editor.suggest.snippetsPreventQuickSuggestions": true,
+"editor.snippetSuggestions": "top",
+"diffEditor.hideUnchangedRegions.enabled": true,
+
+"explorer.compactFolders": false,
+"explorer.confirmDragAndDrop": false,
+"explorer.sortOrder": "type",
+
+"files.trimTrailingWhitespace": true,
+"files.insertFinalNewline": true,
+"files.trimFinalNewlines": true,
+"files.autoSave": "afterDelay",
+
+"git.confirmSync": false,
+"git.autofetch": true,
+"git.mergeEditor": true,
+"git.openRepositoryInParentFolders": "always",
+
+"liveServer.settings.donotShowInfoMsg": true,
+"liveServer.settings.showOnStatusbar": false,
+
+"terminal.integrated.profiles.windows": {
+"Git Bash": { "path": "C:\\Program Files\\Git\\bin\\bash.exe" }
+},
+"terminal.integrated.defaultProfile.windows": "Git Bash",
+"terminal.integrated.defaultProfile.osx": "bash",
+"terminal.integrated.fontSize": 18,
+
+"workbench.tree.enableStickyScroll": true,
+"workbench.statusBar.visible": true,
+"workbench.colorTheme": "Material Theme Palenight",
+
+"[jsonc]": {
+"editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[markdown]": {
+"editor.unicodeHighlight.invisibleCharacters": true
+},
+"[plaintext]": {
+"editor.unicodeHighlight.invisibleCharacters": true
+},
+
+"vim.leader": " ",
+"vim.hlsearch": true,
+"vim.useSystemClipboard": true,
+"vim.smartRelativeLine": true,
+"vim.useCtrlKeys": false,
+"vim.insertModeKeyBindings": [
+{
+    "before": ["q", "q"],
+    "after": ["<Right>"]
+}
+],
+
+```
+
 ## Appearance
 
 **Show hidden characters**
