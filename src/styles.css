@@ -131,9 +131,8 @@
   }
 
   #hamburger {
-    display: block;
-    width: 3.2rem;
-    height: 3.2rem;
+    width: clamp(2.6rem, 1.7vw + 1.1rem, 3.2rem);
+    height: clamp(2.6rem, 1.7vw + 1.1rem, 3.2rem);
     margin: 0 auto;
     background-image: url("./assets/hamburger.svg");
     background-repeat: no-repeat;
