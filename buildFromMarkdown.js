@@ -151,8 +151,6 @@ function writeHtml(data, fileName) {
   fs.writeFile(`dist/${fileName}`, data, (err) => {
     if (err) {
       console.error(err);
-    } else {
-      console.log(`Edited - ${fileName}`);
     }
   });
 }

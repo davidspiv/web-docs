@@ -66,9 +66,7 @@
   }
 
   code {
-    padding: 2rem;
     border-radius: 4px;
-    text-wrap: wrap;
   }
 
   pre code {
@@ -76,9 +74,11 @@
     background: none;
     white-space: pre;
     -webkit-overflow-scrolling: touch;
-    /* overflow-x: scroll; */
+    text-wrap: nowrap;
+    overflow-x: scroll;
     max-width: 100%;
     min-width: 100px;
+    padding: 2rem;
   }
 
   table {

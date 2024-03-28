@@ -1,8 +1,10 @@
 # HTML
 
+[MDN HTML Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference)
+
 ## Overview
 
-HTML (HyperText Markup Language) is the code that is used to structure a web page and its content. It consists of a series of elements, which you use to enclose sections of content to make it appear or act a certain way.
+HTML (HyperText Markup Language) is the code that is used to structure a web page and its content. It consists of a series of elements, which you use to enclose sections of content to make it appear or act a certain way. <sup>[1]</sup>
 
 ## Elements
 
@@ -15,7 +17,19 @@ closing tag.
 
 `&lt;element-type attribute-property:“value”&gt`
 
-[Element Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes#attribute_list)
+[Element Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+
+[Content Catagories](https://developer.mozilla.org/en-US/docs/Web/HTML/Content_categories)
+
+## Attributes
+
+**Attribute**: additional information in the opening tag about the element that won't appear in the content
+
+`Attribute-property:“value”`
+
+[Global Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes)
+
+[Attribute Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes)
 
 ## Escapes
 
@@ -41,3 +55,7 @@ closing tag.
 : Title of the page, which is the title that appears in the browser tab the page is loaded in. The page title is also used to describe the page when it is bookmarked.
 
 `&lt;body&gt;&lt;/body&gt;` : All the content for the document.
+
+## References
+
+[1] Reference
