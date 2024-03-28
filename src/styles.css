@@ -131,10 +131,10 @@
   }
 
   #hamburger {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 2.3rem;
+    height: 2.1rem;
     margin: 0 auto;
-    /* background: url("assets/hamburger.svg"); */
+    background-image: url("assets/hamburger.svg");
   }
 
   #main-nav {

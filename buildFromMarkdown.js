@@ -27,35 +27,6 @@ const header = `
   <header>
   <div class="content-wrapper">
     <button id="hamburger">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99 90">
-<rect
-    x="0.5"
-    y="72.5"
-    width="98"
-    height="17"
-    rx="4"
-    fill="#ffff"
-    stroke="#7e8dc3"
-/>
-<rect
-    x="0.5"
-    y="36.5"
-    width="98"
-    height="17"
-    rx="4"
-    fill="#ffff"
-    stroke="#7e8dc3"
-/>
-<rect
-    x="0.5"
-    y="0.5"
-    width="98"
-    height="17"
-    rx="4"
-    fill="#ffff"
-    stroke="#7e8dc3"
-/>
-</svg>
     </button>
     <a href="#Introduction"><p id="header-logo">Web Dev Notes</p></a>
   </div>
