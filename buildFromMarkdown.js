@@ -27,6 +27,7 @@ const header = `
   <header>
   <div class="content-wrapper">
     <button id="hamburger">
+    <img src="./assets/hamburger.svg" alt="" />
     </button>
     <a href="#Introduction"><p id="header-logo">Web Dev Notes</p></a>
   </div>
