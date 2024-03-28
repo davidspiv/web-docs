@@ -130,7 +130,8 @@
     align-items: center;
   }
 
-  #hamburger {
+  #hamburger,
+  #hamburger img {
     width: 3.5rem;
     height: 3.5rem;
     margin: 0 auto;
@@ -211,13 +212,13 @@
     background-color: #778eb3;
   }
 
-  button {
+  /* button {
     opacity: 0.8;
   }
 
   button:hover {
     opacity: 1;
-  }
+  } */
 
   #main-nav {
     background-color: #778eb3;
