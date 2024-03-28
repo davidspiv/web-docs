@@ -130,11 +130,13 @@
     align-items: center;
   }
 
-  #hamburger,
-  #hamburger img {
-    width: 3.5rem;
-    height: 3.5rem;
+  #hamburger {
+    display: block;
+    width: 3.2rem;
+    height: 3.2rem;
     margin: 0 auto;
+    background-image: url("./assets/hamburger.svg");
+    background-repeat: no-repeat;
   }
 
   #main-nav {
