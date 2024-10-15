@@ -23,7 +23,7 @@
   }
 
   html {
-    font-family: Montserrat, Georgia, "Times New Roman", Times, serif;
+    font-family: Montserrat, Georgia, "Times New Roman", serif;
     scroll-behavior: smooth;
   }
 
@@ -75,10 +75,11 @@
     white-space: pre;
     -webkit-overflow-scrolling: touch;
     text-wrap: nowrap;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
+    overflow: auto;
     max-width: 100%;
     min-width: 100px;
-    padding: 2rem;
+    padding: var(--small-gap);
   }
 
   table {

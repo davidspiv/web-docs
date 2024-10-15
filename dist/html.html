@@ -85,20 +85,22 @@
       <main>
 
 <h1>HTML</h1>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference">MDN HTML Reference</a></p>
 <h2>Overview</h2>
-<p>HTML (HyperText Markup Language) is the code that is used to structure a web page and its content. It consists of a series of elements, which you use to enclose sections of content to make it appear or act a certain way. <sup>[1]</sup></p>
-<h2>Elements</h2>
+<p>HTML (HyperText Markup Language) is the code that is used to structure a web page and its content. It consists of a series of elements, which you use to enclose sections of content to make it appear or act a certain way.[1]</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference">MDN HTML Reference</a></p>
+<h2>Anatomy of an Element</h2>
 <p><strong>Element</strong>: defined by opening tag, content, and a
 closing tag.</p>
 <p><code>&amp;lt;element-type&amp;gt;content&amp;lt;/element-type&amp;gt;</code></p>
 <p><strong>Void Element</strong>: defined by single tag which is typically used to insert/embed data in document.</p>
 <p><code>&amp;lt;element-type attribute-property:“value”&amp;gt</code></p>
+<p>HTML should be coded to represent the data that will be populated and not based on its default presentation styling. [2] Using semantic elements according to common practice will create a more accessible experience.</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Element Reference</a></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Content_categories">Content Catagories</a></p>
 <h2>Attributes</h2>
 <p><strong>Attribute</strong>: additional information in the opening tag about the element that won&#39;t appear in the content</p>
 <p><code>Attribute-property:“value”</code></p>
+<p>Most attributes have two faces, the content attribute and IDL (Interface definition language) attribute. The content attribute is set via HTML. The IDL attribute is a Javascript property that reflects it&#39;s counterpart content attribute. There are no consistent rules regarding how IDL attributes transform their corresponding content attributes. However, these relationships are generally intuitive. [3]</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">Global Attributes</a></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes">Attribute Reference</a></p>
 <h2>Escapes</h2>
@@ -139,7 +141,9 @@ closing tag.</p>
 : Title of the page, which is the title that appears in the browser tab the page is loaded in. The page title is also used to describe the page when it is bookmarked.</p>
 <p><code>&amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;</code> : All the content for the document.</p>
 <h2>References</h2>
-<p>[1] Reference</p>
+<p>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">MDN HTML Basics</a>
+[2] <a href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics">MDN Semantics</a>
+[3] <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes#content_versus_idl_attributes">MDN Content versus IDL attributes</a></p>
 
 </main>
 </div>

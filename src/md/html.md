@@ -1,12 +1,12 @@
 # HTML
 
-[MDN HTML Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference)
-
 ## Overview
 
-HTML (HyperText Markup Language) is the code that is used to structure a web page and its content. It consists of a series of elements, which you use to enclose sections of content to make it appear or act a certain way. <sup>[1]</sup>
+HTML (HyperText Markup Language) is the code that is used to structure a web page and its content. It consists of a series of elements, which you use to enclose sections of content to make it appear or act a certain way.[1]
 
-## Elements
+[MDN HTML Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference)
+
+## Anatomy of an Element
 
 **Element**: defined by opening tag, content, and a
 closing tag.
@@ -17,6 +17,8 @@ closing tag.
 
 `&lt;element-type attribute-property:“value”&gt`
 
+HTML should be coded to represent the data that will be populated and not based on its default presentation styling. [2] Using semantic elements according to common practice will create a more accessible experience.
+
 [Element Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
 [Content Catagories](https://developer.mozilla.org/en-US/docs/Web/HTML/Content_categories)
@@ -26,6 +28,8 @@ closing tag.
 **Attribute**: additional information in the opening tag about the element that won't appear in the content
 
 `Attribute-property:“value”`
+
+Most attributes have two faces, the content attribute and IDL (Interface definition language) attribute. The content attribute is set via HTML. The IDL attribute is a Javascript property that reflects it's counterpart content attribute. There are no consistent rules regarding how IDL attributes transform their corresponding content attributes. However, these relationships are generally intuitive. [3]
 
 [Global Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes)
 
@@ -58,4 +62,6 @@ closing tag.
 
 ## References
 
-[1] Reference
+[1] [MDN HTML Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
+[2] [MDN Semantics](https://developer.mozilla.org/en-US/docs/Glossary/Semantics)
+[3] [MDN Content versus IDL attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes#content_versus_idl_attributes)

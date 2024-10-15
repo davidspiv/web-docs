@@ -3,9 +3,9 @@
 // Wrap HTML snippets with boilerplate
 // Write HTML to files in /dist
 
-import fs from "fs";
-import path from "path";
-import { marked } from "marked";
+import fs from 'node:fs';
+import path from 'node:path';
+import { marked } from 'marked';
 
 const header = `
 <!DOCTYPE html>
@@ -105,52 +105,46 @@ const footer = `
 </html>
 `;
 
-getMarkdownFromSrc("src/md/", /\.md$/, function (fileName) {
-  parse(fileName);
+getMarkdownFromSrc('src/md/', /\.md$/, (fileName) => {
+	parse(fileName);
 });
 
 function getMarkdownFromSrc(startPath, filter, callback) {
-  if (!fs.existsSync(startPath)) {
-    console.log("Mo markdown files in ", startPath);
-    return;
-  }
+	if (!fs.existsSync(startPath)) {
+		console.log('Mo markdown files in ', startPath);
+		return;
+	}
 
-  const files = fs.readdirSync(startPath);
+	const files = fs.readdirSync(startPath);
 
-  for (let i = 0; i < files.length; i++) {
-    const fileName = path.join(startPath, files[i]);
-    if (filter.test(fileName)) callback(fileName);
-  }
+	for (let i = 0; i < files.length; i++) {
+		const fileName = path.join(startPath, files[i]);
+		if (filter.test(fileName)) callback(fileName);
+	}
 }
 
 function parse(fileName) {
-  fs.readFile(fileName, "utf8", (err, data) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-    data = marked.parse(data);
+	fs.readFile(fileName, 'utf8', (err, data) => {
+		if (err) {
+			console.error(err);
+			return;
+		}
 
-    //Janky
-    // data = data
-    //   .replace(`<h3>`, `</section><section><h3>`)
-    //   .replace(`</h2>\n</section>`, "</h2>")
-    //   .replace(`</main>`, `</section></main>`);
-
-    writeHtml(data, fileName);
-  });
+		writeHtml(marked.parse(data), fileName);
+	});
 }
 
 function writeHtml(data, fileName) {
-  data = `${header}${data}${footer}`;
+	const formattedData = `${header}${data}${footer}`;
 
-  console.log(fileName);
-  fileName = fileName.replace("src\\md", "");
-  fileName = fileName.replace("md", "html");
+	console.log(fileName);
+	const formattedFileName = fileName
+		.replace('src/md/', '')
+		.replace('.md', '.html');
 
-  fs.writeFile(`dist/${fileName}`, data, (err) => {
-    if (err) {
-      console.error(err);
-    }
-  });
+	fs.writeFile(`dist/${formattedFileName}`, formattedData, (err) => {
+		if (err) {
+			console.error(err);
+		}
+	});
 }

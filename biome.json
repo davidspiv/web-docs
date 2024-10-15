@@ -1,0 +1,25 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.9.3/schema.json",
+	"organizeImports": {
+		"enabled": true
+	},
+	"formatter": { "indentWidth": 1 },
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"suspicious": { "noShorthandPropertyOverrides": "off" }
+		},
+		"ignore": ["node_modules/*"]
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "single",
+			"jsxQuoteStyle": "single",
+			"indentWidth": 1
+		}
+	},
+	"files": {
+		"ignoreUnknown": true
+	}
+}
